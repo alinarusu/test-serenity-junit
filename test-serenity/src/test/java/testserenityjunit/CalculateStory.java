@@ -27,7 +27,6 @@ public class CalculateStory {
     public void calculate_add() {
         endUser.isTheHomePage();
 		endUser.enters("1", "2");
-        endUser.waitABit(1000);
         endUser.startCalculate();
         endUser.waitABit(1500);
         endUser.shouldSeeTheResult("3");
