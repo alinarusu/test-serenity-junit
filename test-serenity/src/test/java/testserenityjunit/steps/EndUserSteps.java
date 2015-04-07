@@ -12,7 +12,7 @@ public class EndUserSteps extends ScenarioSteps {
     CalculatorPage calculatorPage;
 
     @Step
-    public void is_the_home_page() {
+    public void isTheHomePage() {
 
         calculatorPage.open();
     }
@@ -24,43 +24,37 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void enter_add_operation() {
-        calculatorPage.select_operator_add();
+    public void enterAddOperation() {
+        calculatorPage.selectOperatorAdd();
     }
 
     @Step
-    public void enter_div_operation() {
-        calculatorPage.select_operator_div();
+    public void enterDivOperation() {
+        calculatorPage.selectOperatorDiv();
     }
 
     @Step
-    public void enter_mod_operation() {
-        calculatorPage.select_operator_mod();
+    public void enterModOperation() {
+        calculatorPage.selectOperatorMod();
     }
 
     @Step
-    public void enter_mul_operation() {
-        calculatorPage.select_operator_mul();
+    public void enterMulOperation() {
+        calculatorPage.selectOperatorMul();
     }
 
     @Step
-    public void enter_sub_operation() {
-        calculatorPage.select_operator_sub();
+    public void enterSubOperation() {
+        calculatorPage.selectOperatorSub();
     }
 
     @Step
-    public void starts_calculate() {
-
+    public void startCalculate() {
         calculatorPage.calculate();
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     @Step
-    public void should_see_the_result(java.lang.String result) {
+    public void shouldSeeTheResult(java.lang.String result) {
         assertThat(calculatorPage.getResult(), is(result));
     }
 

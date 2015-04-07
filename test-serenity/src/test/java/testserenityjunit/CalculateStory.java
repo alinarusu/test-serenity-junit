@@ -25,50 +25,52 @@ public class CalculateStory {
     @Issue("#CALC-ADD")
     @Test
     public void calculate_add() {
-        endUser.is_the_home_page();
+        endUser.isTheHomePage();
 		endUser.enters("1", "2");
-        endUser.starts_calculate();
-        endUser.should_see_the_result("3");
+        endUser.waitABit(1000);
+        endUser.startCalculate();
+        endUser.waitABit(1500);
+        endUser.shouldSeeTheResult("3");
     }
 
     @Issue("#CALC-DIV")
     @Test
     public void calculate_div() {
-        endUser.is_the_home_page();
         endUser.enters("10", "2");
-        endUser.enter_div_operation();
-        endUser.starts_calculate();
-        endUser.should_see_the_result("5");
+        endUser.enterDivOperation();
+        endUser.startCalculate();
+        endUser.waitABit(1500);
+        endUser.shouldSeeTheResult("5");
     }
 
     @Issue("#CALC-MOD")
     @Test
     public void calculate_mod() {
-        endUser.is_the_home_page();
         endUser.enters("2", "2");
-        endUser.enter_mod_operation();
-        endUser.starts_calculate();
-        endUser.should_see_the_result("0");
+        endUser.enterModOperation();
+        endUser.startCalculate();
+        endUser.waitABit(1500);
+        endUser.shouldSeeTheResult("0");
     }
 
     @Issue("#CALC-MUL")
     @Test
     public void calculate_mul() {
-        endUser.is_the_home_page();
         endUser.enters("2", "2");
-        endUser.starts_calculate();
-        endUser.enter_mul_operation();
-        endUser.should_see_the_result("4");
+        endUser.enterMulOperation();
+        endUser.startCalculate();
+        endUser.waitABit(1500);
+        endUser.shouldSeeTheResult("4");
     }
 
     @Issue("#CALC-SUB")
     @Test
     public void calculate_sub() {
-        endUser.is_the_home_page();
         endUser.enters("8", "2");
-        endUser.enter_sub_operation();
-        endUser.starts_calculate();
-        endUser.should_see_the_result("6");
+        endUser.enterSubOperation();
+        endUser.startCalculate();
+        endUser.waitABit(1500);
+        endUser.shouldSeeTheResult("6");
     }
 
     @Pending @Test
